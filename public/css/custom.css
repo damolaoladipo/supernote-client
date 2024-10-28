@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+}
+
+.brand-black, .brand-black a, .brand-black span{
+    color: #1A1A26 !important;
+}
+
+.brand-grey, .brand-grey a, .brand-grey span{
+    color: #727473 !important;
+}
+
+.brand-green, .brand-green a, .brand-green span{
+    color: #15a157 !important;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+}
+
+.container-inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.container-inner .pair{
+    height: 100%;
+    
+}
+.container-inner .pair.left{
+    width: 45%;
+    padding: 2rem 7.5rem;
+}
+.container-inner .pair.right{
+    width:  55%;
+    background-color: blue;
+}
+
+.auth-form {
+    width: 380px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.auth-form .form-tab {
+    width: 100%;
+}
+
+
+.auth-form .form-tab .inner{
+    width: 54.3%;
+    background-color: rgb(241, 247, 241);
+    display: flex;
+    padding: 3px;
+    border-radius: 22px;
+}
+
+.auth-form .form-tab .tab{
+    padding: 0.8rem 1rem;
+    border-radius: 20px;
+}
+
+.auth-form .form-tab .tab.active{
+    background-color: #15a157;
+    color: #fff;
+}
+
+
+
+.form .form-group {
+    width: 100%;
+}
+
+.form .form-control {
+    width: 100%;
+    padding: 1.2rem 1rem ; 
+    box-shadow: #15a157;
+    outline: none; 
+    border: 1px solid #dae0eb;
+
+    -webkit-transition: all 0.35s ease-out;
+    -moz-transition: all 0.35s ease-out;
+    transition: all 0.35s ease-out;
+}
+
+.form input.form-control {
+    border-radius: 35px;
+}
+
+.form .input-icon {
+    left: 1.2rem;
+    top: 36.5%;
+}
+
+.form .eye-icon {
+    right: 1.2rem;
+    top: 36.5%;
+}
+
+.form .form-control.show-focus{
+    border: 1px solid  #15a157 !important;
+}
+
+.form .btn {
+    display: block;
+    width: 100%;
+    padding: 1.2rem 1rem;
+    background-color: #15a157;;
+    text-align: center;
+    border-radius: 35px;
+}
+
+.auth-form .auth-divider {
+    width: 100%;
+    position: relative;
+    padding: 1rem 0rem;
+}
+
+.auth-form .auth-divider .line {
+    height: 1px;
+    background-color: #727473;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.auth-form .auth-divider span { 
+    padding: 0.5rem 1rem;
+    background-color: rgb(255, 255, 255);
+    top: -2.8px;
+    left: 25.5%
+}
+
+.auth-form .brand-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.auth-form .icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: 1px solid #15a157;
+}
+
+.auth-form .icon-button img {
+    width: 40px;
+    height: 40px;
+}
+
+
