@@ -3,7 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import Welcome from "./pages/auth/Welcome";
 import ForgotPassword from "./pages/auth/ForgotPassword";
-import Confirmation from "./pages/auth/Confirmation";
+import NoteDetails from "./pages/noteDetails/NoteDetails";
+import EditNote from "./pages/editnote/EditNote";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Home from "./pages/Home/Homepage";
+
+
+
+
 
 //pages
 
@@ -26,11 +33,13 @@ const App = () => {
           onError={errorHandler}
         >
           <Routes>
-            <Route path="/" element={<Login />} />
-
+            <Route path="/" element={<Home />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/note/:id" element={<NoteDetails />} />
+            <Route path="/note/edit/:id" element={<EditNote />} />
+            <Route path="/register" element={<Login />} />
             <Route path="/login" element={<Login />} />
             <Route path="/welcome" element={<Welcome />} />
-            <Route path="/confirmation" element={<Confirmation />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
           </Routes>
         </ErrorBoundary>

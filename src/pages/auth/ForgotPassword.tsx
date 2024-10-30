@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Title from '../../components/title/Title';
 import TextInput from '../../components/input/TextInput';
 import PasswordInput from '../../components/input/PasswordInput';
-import Button from '../../components/Button/Button';
-import IconButton from '../../components/Button/IconButton';
+import Button from '../../components/button/Button';
+import IconButton from '../../components/button/IconButton';
 import { Link } from 'react-router-dom';
 import storage from '../../utils/storage.util';
 
