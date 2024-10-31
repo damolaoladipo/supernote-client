@@ -10,7 +10,7 @@ const TextInput = (props: ITextInput) => {
     id, 
     hasIcon = false, 
     icon,
-    defaultValue,
+    value,
     autoComplete,
     className,
     showFocus,
@@ -35,7 +35,7 @@ const TextInput = (props: ITextInput) => {
         type={type} 
         name={name ? name : ''} 
         placeholder={placeholder ? placeholder : 'Type here'}
-        defaultValue={defaultValue ? defaultValue : ''}
+        defaultValue={value ? value : ''}
         onChange={onChange}
         autoComplete={autoComplete ? 'on' : 'off'}
         className={`form-control ${showFocus ? showFocus : ''} ${hasIcon ? 'pdl3' : 'pdl2'} font-dmsans ${className ? className : ''}`}

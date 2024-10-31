@@ -12,7 +12,7 @@ const Navigation = () => {
         <div className='navigation'>
         <div className="nav">
           <NavButton text='Home' link='/dashboard' icon={'/assets/icons/dashboard.svg'} />
-          <NavButton text='My Notes' icon='fe fe-home'/>
+          <NavButton text='My Notes' icon='fe-user'/>
           <NavButton text='Favourite' icon='fe-home'/>
           
 

@@ -118,8 +118,8 @@ const Dashboard = () => {
                                     {notes.map((note: INote) => (
                                         
                                         <NoteCard 
-                                        key= {note.id}
-                                        id={note.id}
+                                        key= {note._id}
+                                        id={note._id}
                                         title={note.title}
                                         content={note.content}
                 

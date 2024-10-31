@@ -21,7 +21,7 @@ export interface ITitle {
 }
 
 export interface ITextInput {
-  type: "email" | "text";
+  type: "email" | "text" | "textarea";
   ref?: RefObject<HTMLInputElement>;
   showFocus?: boolean;
   className?: string;
@@ -32,6 +32,7 @@ export interface ITextInput {
   icon?: string;
   name?: string;
   placeholder?: string;
+  value?: string
   autoComplete?: boolean;
   onChange(e: ChangeEvent<HTMLInputElement>): void;
 }
@@ -39,7 +40,7 @@ export interface ITextInput {
 export interface INote {
   title?: string;
   content?: string;
-  id?: string;
+  _id?: string;
   userId?: string;
   hasIcon?: boolean
   className?: string

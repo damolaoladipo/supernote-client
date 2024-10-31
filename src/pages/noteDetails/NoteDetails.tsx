@@ -13,8 +13,8 @@ const NoteDetails = () => {
     axios.get(`http://localhost:5001/api/note/${id}`)
       .then(response => {
         setNote({
-          title: response.data.title,
-          content: response.data.content
+          title: response.data.data.title,
+          content: response.data.data.content
         });
       })
       .catch(error => console.error('Error fetching note:', error));
@@ -35,7 +35,7 @@ const NoteDetails = () => {
       <h5 className="card-title">{note.title}</h5>
       <p className="card-text">{note.content}</p>
       <div className="note-card-actions d-flex justify-content-between">
-        <Link to={`/notes/edit/${id}`} className="btn btn-outline-success btn-sm">Edit</Link>
+        <Link to={`/edit/${id}`} className="btn btn-outline-success btn-sm">Edit</Link>
         <button className="btn btn-outline-danger btn-sm" onClick={() => setShowModal(true)}>Delete</button>
       </div>
 
