@@ -4,14 +4,21 @@ import Title from '../../components/title/Title';
 import NoteCard from '../../components/noteCard/NoteCard';
 import axios from 'axios';
 import { INote} from '../../utils/interface.util';
+import SideMenu from '../../components/sidemenu/SideMenu';
+import DashboardHeader from '../../components/header/DashboardHeader';
+import { Link } from 'react-router-dom';
+import storage from '../../utils/storage.util';
 
 const Dashboard = () => {
 
     const [search, setSearch] = useState<string>('')
     const [notes, setNotes] = useState([])
     const [error, setError] = useState<string | null>(null)
+    const [tab, setTab] = useState<string>('signup')
 
     useEffect(() => {
+
+        setDefaultTab()
 
         const getNotes = async () => {
 
@@ -28,7 +35,20 @@ const Dashboard = () => {
 
     }, []);
 
+    const setDefaultTab = ( ) => {
+        const val = storage.fetchData('active-tab')
 
+        if (val) {
+            setTab(val.toString())
+        }
+    }
+
+
+    const toggleTab = (e: any, tab: string) => {
+        if (e) { e.preventDefault() }
+        setTab(tab)
+        storage.keepData('active-tab', tab)
+    }
 
 
     return (
@@ -38,6 +58,7 @@ const Dashboard = () => {
                 <div className="dashboard container-inner">
 
                     <div className="dashboard pair left">
+                        <SideMenu/>
 
                     </div>
 
@@ -46,10 +67,12 @@ const Dashboard = () => {
                         <div className="content-area">
 
                             <div className="content-area top">
-
+                                <DashboardHeader />
+                                
                             </div>
 
                             <div className="content-area bottom">
+
 
                                 <div className="header">
 
@@ -77,7 +100,16 @@ const Dashboard = () => {
                                     <h2>Tables</h2>
                                     <h2>Cards</h2>
                                     <span>Icon</span>
-                                </div> */}
+                                    </div> */}
+                                    <div className='form-tab inner'>
+                                        <div className="inner">
+                                        <Link onClick={(e) => toggleTab(e, 'login')} to="" className={`tab login fs-14 font-dmsans-medium ${tab === 'login' ? 'active' : ''}`}>Tables</Link>
+                                        <span className="pdl"></span>
+                                        <Link onClick={(e) => toggleTab(e, 'signup')} to="" className={`tab signup fs-14 font-dmsans-medium ${tab === 'signup' ? 'active' : ''}`}>Cards</Link>
+                                        </div>
+                                    </div>
+
+                                    <div className="mrgb4"></div>
 
                                 <div className="note-list">
 

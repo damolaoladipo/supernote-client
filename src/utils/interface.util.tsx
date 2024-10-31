@@ -90,3 +90,9 @@ export interface IIconButton {
     height?: string;
   };
 }
+
+export interface INavButton {
+  link?: string,
+  icon: string,
+  text: string
+}
