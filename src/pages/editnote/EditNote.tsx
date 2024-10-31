@@ -22,6 +22,7 @@ const EditNote = () => {
             }
         };
         if (id) fetchNote();
+        
     }, [id]);
 
     const handleSave = async () => {

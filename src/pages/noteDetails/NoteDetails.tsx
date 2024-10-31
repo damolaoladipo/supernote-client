@@ -35,7 +35,7 @@ const NoteDetails = () => {
       <h5 className="card-title">{note.title}</h5>
       <p className="card-text">{note.content}</p>
       <div className="note-card-actions d-flex justify-content-between">
-        <Link to={`/edit/${id}`} className="btn btn-outline-success btn-sm">Edit</Link>
+        <Link to={`edit/${id}`} className="btn btn-outline-success btn-sm">Edit</Link>
         <button className="btn btn-outline-danger btn-sm" onClick={() => setShowModal(true)}>Delete</button>
       </div>
 

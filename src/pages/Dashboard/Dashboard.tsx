@@ -78,8 +78,8 @@ const Dashboard = () => {
 
                                     <div className="header content">
 
-                                        <div className=" header content title">
-                                            <Title text='Good Morning, Damola!' size='fs-32'/>
+                                        <div className="d-flex flex-column align-items-start header content title">
+                                            <Title text='Welcome back, Damola!' size='fs-32'/>
                                         </div>
                                                 
                                         <div className=" header content sub-text">
@@ -88,19 +88,21 @@ const Dashboard = () => {
 
                                     </div>
 
-                                    <div className="header search">
+                                    <div className="mrgb4"></div>
+
+                                    <div className="w-100 mt-3">
                                         
-                                        <TextInput type='text' onChange={(e) => {setSearch(e.target.value) }}/>
+                                        <TextInput 
+                                        type='text' 
+                                        onChange={(e) => {setSearch(e.target.value) }}
+                                        className="form-control brand-grey"
+                                        placeholder="Search notes..."
+                                        />
 
                                     </div>
 
                                 </div>
 
-                                {/* <div className="note-tab">
-                                    <h2>Tables</h2>
-                                    <h2>Cards</h2>
-                                    <span>Icon</span>
-                                    </div> */}
                                     <div className='form-tab inner'>
                                         <div className="inner">
                                         <Link onClick={(e) => toggleTab(e, 'login')} to="" className={`tab login fs-14 font-dmsans-medium ${tab === 'login' ? 'active' : ''}`}>Tables</Link>

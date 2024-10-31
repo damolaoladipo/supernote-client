@@ -7,6 +7,7 @@ import NoteDetails from "./pages/noteDetails/NoteDetails";
 import EditNote from "./pages/editnote/EditNote";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Home from "./pages/Home/Homepage";
+import AddNote from "./pages/addnote/AddNote";
 
 
 
@@ -36,7 +37,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/note/:id" element={<NoteDetails />} />
-            {/* <Route path="/note/:id" element={<EditNote />} /> */}
+            <Route path="/note/add" element={<AddNote />} />
             <Route path="/edit/:id" element={<EditNote />} />
             <Route path="/register" element={<Login />} />
             <Route path="/login" element={<Login />} />

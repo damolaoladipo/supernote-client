@@ -8,20 +8,30 @@ const DashboardHeader = () => {
     return (
         <>
         
+
         <div className="header">
 
-            <IconButton 
-            icon={{
-                    type: 'image',
-                    url: 'images/assets/apple-logo.png',
-                    name: 'apple logo'
-            }} />
 
             <IconButton 
             icon={{
                     type: 'image',
-                    url: 'images/assets/apple-logo.png',
-                    name: 'apple logo'
+                    url: 'images/assets/share.png',
+                    name: 'share'
+            }} />
+            
+            <IconButton 
+            icon={{
+                    type: 'image',
+                    url:`images/assets/notification.png`,
+                    name: 'notification'
+            }} />
+
+
+            <IconButton 
+            icon={{
+                    type: 'image',
+                    url: 'images/assets/damola-.png',
+                    name: 'profile'
             }} />
 
         </div>
