@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import NavButton from './button/NavButton';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
 
@@ -27,7 +28,9 @@ const Navigation = () => {
           <NavButton text='Settings' link='' icon={'images/feather-white/settings.svg'}/>
                    
         </div>
+        <Link to="/login">
         <button className='button logout'><img src='/assets/icons/logout.svg' alt="" /> Log Out</button>
+        </Link>
       </div>
         </>
     );

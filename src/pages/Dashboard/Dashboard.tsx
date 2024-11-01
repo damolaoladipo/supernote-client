@@ -93,7 +93,7 @@ const Dashboard = () => {
                                             to=""
                                             className={`tab cards fs-14 font-dmsans-medium ${tab === 'cards' ? 'active' : ''}`}
                                         >
-                                            Cards
+                                            
                                         </Link>
 
                                         <span className="pdl"></span>
@@ -103,11 +103,18 @@ const Dashboard = () => {
                                             to=""
                                             className={`tab tables fs-14 font-dmsans-medium ${tab === 'tables' ? 'active' : ''}`}
                                         >
-                                            Tables
+                                            
                                         </Link>
+
 
                                     </div>
                                 </div>
+
+                                <div className="d-flex justify-content-start mb-3 ">
+                        <Link to="http://localhost:3000/note/add" className="btn btn-primary">
+                            Add Note
+                        </Link>
+                    </div>
 
 
                                 <div className="mrgb4"></div>

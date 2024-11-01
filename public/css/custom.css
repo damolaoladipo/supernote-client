@@ -1,7 +1,5 @@
 *{
     box-sizing: border-box;
-    padding: 0 0;
-    margin: 0 0;
     
 } 
 
@@ -82,7 +80,7 @@
     background-color: #4d2114;
     color: white;
     margin: 0 0;
-    width: 100%;
+    /* width: 25%; */
 }
 
 .dashboard .container-inner .pair.right{
