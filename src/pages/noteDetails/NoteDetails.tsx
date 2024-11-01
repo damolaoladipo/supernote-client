@@ -9,25 +9,30 @@ const NoteDetails = () => {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    // Fetch the note details by ID when the component loads
-    axios.get(`http://localhost:5001/api/note/${id}`)
-      .then(response => {
+    const fetchNote = async () => {
+      try {
+        const response = await axios.get(`http://localhost:5001/api/note/${id}`);
         setNote({
           title: response.data.data.title,
-          content: response.data.data.content
+          content: response.data.data.content,
         });
-      })
-      .catch(error => console.error('Error fetching note:', error));
+      } catch (error) {
+        console.error('Error fetching note:', error);
+      }
+    };
+
+    fetchNote();
   }, [id]);
 
-  const handleDelete = () => {
-    axios.delete(`http://localhost:5001/api/note/${id}`)
-      .then(() => {
-        console.log('Note deleted');
-        setShowModal(false);
-        navigate('/notes'); 
-      })
-      .catch(error => console.error('Error deleting note:', error));
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`http://localhost:5001/api/note/${id}`);
+      console.log('Note deleted');
+      setShowModal(false);
+      navigate('/dashboard'); 
+    } catch (error) {
+      console.error('Error deleting note:', error);
+    }
   };
 
   return (

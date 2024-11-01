@@ -97,3 +97,17 @@ export interface INavButton {
   icon: string,
   text: string
 }
+
+export interface IUser {
+  _id?: string;
+  userId?: string;
+  avatar: string,
+  firstName: string
+  lastName: string
+  username:  string,
+  email: string,
+  password: string
+  createdAt: Date;
+  updatedAt: Date;
+  slug: string;
+}
