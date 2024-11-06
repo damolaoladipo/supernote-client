@@ -9,9 +9,10 @@ import NoteCard from '../../components/noteCard/NoteCard';
 
 const AddNote = (props: INote) => {
     const { _id, content, title, createdAt, updatedAt } = props;
+
     const [titles, setTitles] = useState<string>('');
     const [contents, setContents] = useState<string>('');
-    const [errorMessage, setErrorMessage] = useState<string>(''); // State for error message
+    const [errorMessage, setErrorMessage] = useState<string>('');
     const [notes, setNotes] = useState<INote[]>([]);
     const navigate = useNavigate();
 
