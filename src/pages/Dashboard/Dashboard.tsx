@@ -137,7 +137,7 @@ const Dashboard = () => {
 
                                 {tab === 'tables' && (
                                     <>
-                                        {/* <div className="note-table">
+                                        <div className="note-table">
                                             {error && <p>{error}</p>}
                                             {notes.map((note: INote) => (
                                                 <NoteCard 
@@ -146,7 +146,7 @@ const Dashboard = () => {
                                                 title={note.title} 
                                                 content={note.content} />
                                             ))}
-                                        </div> */}
+                                        </div>
 
                                         <div className="note-table">
                                             {error && <p className="text-danger">{error}</p>}

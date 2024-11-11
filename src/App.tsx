@@ -8,7 +8,6 @@ import EditNote from "./pages/editnote/EditNote";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Home from "./pages/Home/Homepage";
 import AddNote from "./pages/addnote/AddNote";
-import { AuthProvider } from "./context/AuthContext";
 
 
 
@@ -37,12 +36,12 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             
-            <AuthProvider>
+        
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/note/:id" element={<NoteDetails />} />
               <Route path="/note/add" element={<AddNote />} />
               <Route path="/edit/:id" element={<EditNote />} />
-            </AuthProvider>
+
 
             <Route path="/register" element={<Login />} />
             <Route path="/login" element={<Login />} />
